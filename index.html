@@ -8,17 +8,15 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Font untuk judul romantis (cursive) -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS untuk styling responsif & modern -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Canvas Confetti untuk efek ledakan cinta/konfeti -->
+    <!-- Canvas Confetti -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <style>
-        /* Pengaturan Font & Warna Dasar */
         body {
             font-family: 'Quicksand', sans-serif;
             background: linear-gradient(135deg, #ffe6fa 0%, #fff0f5 50%, #f0e6ff 100%);
@@ -31,14 +29,8 @@
             font-family: 'Great Vibes', cursive;
         }
 
-        /* Animasi Custom */
-        .fade-in {
-            animation: fadeIn 1.5s ease-in forwards;
-        }
-        
-        .fade-out {
-            animation: fadeOut 1s ease-out forwards;
-        }
+        .fade-in { animation: fadeIn 1.5s ease-in forwards; }
+        .fade-out { animation: fadeOut 1s ease-out forwards; }
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -50,14 +42,8 @@
             to { opacity: 0; transform: translateY(-20px); }
         }
 
-        /* Animasi Floating (Mengambang) */
-        .floating {
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .floating-delayed {
-            animation: float 5s ease-in-out infinite 2s;
-        }
+        .floating { animation: float 4s ease-in-out infinite; }
+        .floating-delayed { animation: float 5s ease-in-out infinite 2s; }
 
         @keyframes float {
             0% { transform: translateY(0px); }
@@ -65,17 +51,13 @@
             100% { transform: translateY(0px); }
         }
 
-        /* Efek Sparkle Lembut */
-        .sparkle {
-            animation: pulse 2s infinite;
-        }
+        .sparkle { animation: pulse 2s infinite; }
 
         @keyframes pulse {
             0%, 100% { opacity: 1; transform: scale(1); }
             50% { opacity: 0.7; transform: scale(1.05); }
         }
 
-        /* Desain Polaroid */
         .polaroid {
             background: white;
             padding: 12px 12px 40px 12px;
@@ -94,11 +76,9 @@
             height: 250px;
             object-fit: cover;
             border-radius: 2px;
-            /* Placeholder background color if image doesn't load */
-            background-color: #f3f4f6; 
+            background-color: #ffe6fa; 
         }
 
-        /* Cursor untuk efek mengetik */
         .typing-cursor::after {
             content: '|';
             animation: blink 1s step-end infinite;
@@ -109,14 +89,12 @@
             50% { opacity: 0; }
         }
 
-        /* Sembunyikan konten utama sebelum tombol diklik */
         #main-content {
             display: none;
             opacity: 0;
             transition: opacity 1.5s ease-in-out;
         }
 
-        /* Kelas untuk memunculkan elemen saat di-scroll */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -127,7 +105,6 @@
             transform: translateY(0);
         }
 
-        /* Animasi Hati Jatuh */
         .falling-heart {
             position: fixed;
             top: -10vh;
@@ -144,20 +121,16 @@
 </head>
 <body class="min-h-screen relative">
 
-    <!-- AUDIO BACKGROUND -->
     <audio id="bgMusic" loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        <source src="https://delicate-peach-d92qm9jdtc.edgeone.app/ssstik.io_1773734751778.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- 1. OPENING SCREEN -->
+    <!-- OPENING SCREEN -->
     <div id="opening-screen" class="fixed inset-0 flex flex-col items-center justify-center z-50 bg-gradient-to-br from-[#ffe6fa] via-[#fff0f5] to-[#f0e6ff]">
         <div class="text-center p-6 max-w-lg fade-in">
             <div class="text-rose-400 text-5xl mb-4 floating">✨</div>
-            
-            <h1 class="text-2xl md:text-3xl font-medium text-gray-700 mb-2">Hai <span class="text-rose-500 font-semibold">Sayangku marwah</span>,</h1>
-            <p class="text-lg text-gray-600 mb-10">Aku punya sesuatu yang spesial buat kamu...</p>
-            
+            <h1 class="text-2xl md:text-3xl font-medium text-gray-700 mb-2">Hai <span class="text-rose-500 font-semibold">Sayangku</span>,</h1>
+            <p class="text-lg text-gray-600 mb-10">Aku punya sesuatu yang spesial buat marwah...</p>
             <button onclick="openSurprise()" class="sparkle bg-rose-400 hover:bg-rose-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-rose-200 transition-all duration-300 transform hover:scale-105">
                 Buka Surprise 💌
             </button>
@@ -167,21 +140,18 @@
     <!-- MAIN CONTENT -->
     <div id="main-content" class="w-full">
         
-        <!-- 2. HALAMAN UCAPAN (Typing Animation) -->
         <section class="min-h-screen flex items-center justify-center py-20 px-6 relative">
             <div class="absolute top-20 left-10 text-rose-300 opacity-50 text-4xl floating">☁️</div>
             <div class="absolute bottom-20 right-10 text-rose-300 opacity-50 text-3xl floating-delayed">🎈</div>
 
             <div class="max-w-3xl text-center bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-white/50 reveal">
                 <h2 class="font-cursive text-5xl md:text-6xl text-rose-500 mb-6 font-bold">Selamat Ulang Tahun</h2>
-                
                 <div class="min-h-[300px]">
                     <p id="typed-message" class="text-lg md:text-xl leading-relaxed text-gray-700 typing-cursor"></p>
                 </div>
             </div>
         </section>
 
-        <!-- 5. COUNTDOWN / INFO UMUR -->
         <section class="py-20 px-6 bg-white/30 backdrop-blur-md border-y border-white/50">
             <div class="max-w-3xl mx-auto text-center reveal">
                 <div class="inline-block p-4 rounded-full bg-rose-100 text-rose-500 mb-4 floating">
@@ -189,54 +159,55 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
                     </svg>
                 </div>
-                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Yeyyy sekarang nambah jadi <span class="text-rose-500">15 tahun</span> 🎉</h3>
-                <p class="text-gray-600">Semoga di umur yang baru ini, semua impian indahmu jadi nyata.</p>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">hihi sekarang udah <span class="text-rose-500">Nambah Tua yaa!</span> 🎉</h3>
+                <p class="text-gray-600">Semoga di umur yang baru ini, semua impian indah sayangggg jadi nyata.</p>
             </div>
         </section>
 
-        <!-- 3. GALLERY KENANGAN (Polaroid Grid) -->
+        <!-- GALLERY KENANGAN -->
         <section class="py-24 px-6 max-w-5xl mx-auto overflow-hidden">
             <div class="text-center mb-16 reveal">
-                <h2 class="font-cursive text-5xl text-rose-500 font-bold mb-3">Kepingan Memori Kita</h2>
-                <p class="text-gray-600">Beberapa momen favoritku bareng kamu...</p>
+                <h2 class="font-cursive text-5xl text-rose-500 font-bold mb-3">Kepingan Memori </h2>
+                <p class="text-gray-600">momen favoritku bareng sayangggg...</p>
             </div>
 
             <div class="flex flex-wrap justify-center gap-8 md:gap-12 reveal">
+                
+                <!-- ====== FOTO 1 ====== -->
                 <div class="polaroid w-64 -rotate-3">
-                    <img src="https://cdn.phototourl.com/uploads/2026-03-17-2dda9b24-24fa-4f76-ba2f-24bdae826f01.jpg&auto=format&fit=crop&w=500&q=80" alt="Kenangan 1">
-                    <p class="font-cursive text-2xl text-center mt-4 text-gray-700">Hari pertama kita...</p>
+                    <img src="https://cdn.phototourl.com/uploads/2026-03-17-2dda9b24-24fa-4f76-ba2f-24bdae826f01.jpg" alt="Kenangan 1">
+                    <p class="font-cursive text-2xl text-center mt-4 text-gray-700">Sukaa banget liat foto ini</p>
                 </div>
 
+                <!-- ====== FOTO 2 ====== -->
                 <div class="polaroid w-64 rotate-2 translate-y-4">
-                    <img src="https://cdn.phototourl.com/uploads/2026-03-17-62c6082d-c51b-40c6-8921-47ea20ca8856.jpg&auto=format&fit=crop&w=500&q=80" alt="Kenangan 2">
-                    <p class="font-cursive text-2xl text-center mt-4 text-gray-700">Senyum paling manis.</p>
+                    <img src="https://cdn.phototourl.com/uploads/2026-03-17-62c6082d-c51b-40c6-8921-47ea20ca8856.jpg" alt="Kenangan 2">
+                    <p class="font-cursive text-2xl text-center mt-4 text-gray-700">Senyumnya cantiiiii sekali</p>
                 </div>
 
+                <!-- ====== FOTO 3 ====== -->
                 <div class="polaroid w-64 -rotate-2">
-                    <img src="https://cdn.phototourl.com/uploads/2026-03-17-b01e99d3-701d-4d55-a586-20ab6dd2b65a.jpg&auto=format&fit=crop&w=500&q=80" alt="Kenangan 3">
-                    <p class="font-cursive text-2xl text-center mt-4 text-gray-700">Cantik banget di sini!</p>
+                    <img src="https://cdn.phototourl.com/uploads/2026-03-17-b01e99d3-701d-4d55-a586-20ab6dd2b65a.jpg" alt="Kenangan 3">
+                    <p class="font-cursive text-2xl text-center mt-4 text-gray-700">hihi foto berdua pertama kita</p>
                 </div>
             </div>
         </section>
 
-        <!-- 4. SURPRISE INTERAKTIF -->
         <section class="py-32 px-6 relative flex flex-col items-center justify-center text-center reveal">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-8">Punya satu pertanyaan nih buat kamu...</h3>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-8">Punya satu pertanyaan nih buat sayangggg...</h3>
             
             <button id="love-btn" onclick="triggerSurprise()" class="group relative px-8 py-4 bg-white text-rose-500 font-bold rounded-full text-lg shadow-[0_0_40px_rgba(2fb,113,133,0.3)] hover:shadow-[0_0_60px_rgba(2fb,113,133,0.5)] transition-all duration-300 border-2 border-rose-200 hover:border-rose-400">
                 <span class="flex items-center gap-2">
-                    Klik kalau kamu sayang aku <span class="text-2xl group-hover:scale-125 transition-transform">❤️</span>
+                    Klik kalau marwah sayang aku <span class="text-2xl group-hover:scale-125 transition-transform">❤️</span>
                 </span>
             </button>
 
-            <!-- Pesan Tersembunyi -->
             <div id="hidden-message" class="hidden mt-10 p-6 bg-rose-500 text-white rounded-2xl shadow-xl max-w-md w-full transform transition-all">
-                <p class="text-xl font-medium mb-2">Yeyyy! Aku juga sayang banget sama kamu! 🥰</p>
+                <p class="text-xl font-medium mb-2">Yeyyy! Aku juga sayang banget sama marwah! 🥰</p>
                 <p class="text-sm opacity-90">Terima kasih udah selalu sabar dan ada buat aku.</p>
             </div>
         </section>
 
-        <!-- 6. ENDING -->
         <section class="py-32 px-6 flex flex-col items-center justify-center text-center reveal relative">
             <div class="max-w-2xl">
                 <h2 class="font-cursive text-5xl text-rose-500 mb-6 font-bold">Sekali Lagi...</h2>
@@ -257,10 +228,8 @@
     </div>
 
     <script>
-        // PESAN SUDAH DIPERBARUI SESUAI REQUEST
         const pesanUcapan = "haiii aloOooo selamat ulanggg tahunnn sayangggkuuuuu cintakuuuuu duniakuuuuuu lopyu lopyukuuuuuu princess kecilkuuuuu.<br><br>ciee udah nambah tua ajaaa nieee ?!?! mishhh u all the best yaaaaaa, semogaaaa cita citaaa yangg sayangggg inginnnkannn bisa terwujuudddd yaaaa, panjangggg umurrt sehatttt selaluuuu annndd berbaktiii kepadaaaa orangggg tuaa, aminnn.<br><br>semangattt terusss yaaa, jangannn pernahhh putusss asaa untukkk mengejarrr impian sayangggggg, akuuu selaluu dukunggg annndd supporttt sayanggg, semogaaa dii umurrt ini sayangg keberkahannn penuuu buat sayanggg, jangannn lupaaaa bersyukurrrr yaaa.<br><br>terimakasiii udaaaa mauuuu sabarrr samaaa akuuu, makasiii jugaaa udaaa sayang ke akuu hwhehee, semogaa tahunn ini akann lebiii baikkdariii sayanggg sebelumnya akuuu sayanggg lakukannnnnn, intinyaaa doaaa dariii akuuu bisaaa menjadiii oranggg yanggg sukses orang yanggg bisaaa membanggakannn oranggg tuaa...<br><br>pokoknya akuuuu selaluuu doa'innn yanggg terbaik buat sayangggg, sayanggggg happyyy birthdayyyyy yaaaa, im so proud of u.<br><br>hadiaaaaanyaaaa besoooo yaaa kalooo kitaaa ketemuuu, sekaliii lagiii happyy birthdayyyy, semangatttttt terusss buattt ngejalaninnnn hariii harinyaaaaa, i always support u, semogaaaa jugaaaa akuuu bisa nemeninnn sayanggg terusss d-iii theee nextt birthdayyyy, okeiiiiii cantikkkk?😘😘😘<br><br>love u more princessss kecillllkuuuuuu.";
         
-        // Elemen-elemen DOM
         const openingScreen = document.getElementById('opening-screen');
         const mainContent = document.getElementById('main-content');
         const bgMusic = document.getElementById('bgMusic');
@@ -268,7 +237,6 @@
         const hiddenMessage = document.getElementById('hidden-message');
         const loveBtn = document.getElementById('love-btn');
 
-        // Fungsi Buka Surprise
         function openSurprise() {
             openingScreen.classList.add('fade-out');
             
@@ -286,7 +254,6 @@
             }, 1000);
         }
 
-        // Fungsi Animasi Mengetik
         let i = 0;
         let isTag = false;
         let text = "";
@@ -305,7 +272,6 @@
                 }
                 
                 i++;
-                // Dipercepat sedikit karena teksnya cukup panjang (20-40ms)
                 let typingSpeed = isTag ? 0 : 20 + Math.random() * 20; 
                 setTimeout(startTyping, typingSpeed);
             } else {
@@ -313,7 +279,6 @@
             }
         }
 
-        // Fungsi Kejutan Interaktif
         function triggerSurprise() {
             loveBtn.style.display = 'none';
             hiddenMessage.classList.remove('hidden');
@@ -323,24 +288,9 @@
             const end = Date.now() + duration;
 
             (function frame() {
-                confetti({
-                    particleCount: 5,
-                    angle: 60,
-                    spread: 55,
-                    origin: { x: 0 },
-                    colors: ['#ffc0cb', '#ffb6c1', '#ff69b4']
-                });
-                confetti({
-                    particleCount: 5,
-                    angle: 120,
-                    spread: 55,
-                    origin: { x: 1 },
-                    colors: ['#ffc0cb', '#ffb6c1', '#ff69b4']
-                });
-
-                if (Date.now() < end) {
-                    requestAnimationFrame(frame);
-                }
+                confetti({ particleCount: 5, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#ffc0cb', '#ffb6c1', '#ff69b4'] });
+                confetti({ particleCount: 5, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#ffc0cb', '#ffb6c1', '#ff69b4'] });
+                if (Date.now() < end) requestAnimationFrame(frame);
             }());
 
             createFallingHearts();
@@ -352,10 +302,7 @@
                 const windowHeight = window.innerHeight;
                 const elementTop = reveals[i].getBoundingClientRect().top;
                 const elementVisible = 100;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add('active');
-                }
+                if (elementTop < windowHeight - elementVisible) reveals[i].classList.add('active');
             }
         }
         window.addEventListener('scroll', revealOnScroll);
@@ -370,13 +317,10 @@
                     heart.style.left = Math.random() * 100 + 'vw';
                     heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
                     document.body.appendChild(heart);
-                    
-                    setTimeout(() => {
-                        heart.remove();
-                    }, 5000);
+                    setTimeout(() => heart.remove(), 5000);
                 }, i * 300);
             }
         }
     </script>
 </body>
-                    </html>
+</html>
