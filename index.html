@@ -145,7 +145,6 @@
 <body class="min-h-screen relative">
 
     <!-- AUDIO BACKGROUND -->
-    <!-- EDIT DI SINI: Ganti src dengan link lagu MP3 romantis kesukaan kalian -->
     <audio id="bgMusic" loop>
         <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
@@ -156,8 +155,7 @@
         <div class="text-center p-6 max-w-lg fade-in">
             <div class="text-rose-400 text-5xl mb-4 floating">✨</div>
             
-            <!-- EDIT DI SINI: Ganti nama pacar Anda -->
-            <h1 class="text-2xl md:text-3xl font-medium text-gray-700 mb-2">Hai <span class="text-rose-500 font-semibold">Sayangkuu marwah</span>,</h1>
+            <h1 class="text-2xl md:text-3xl font-medium text-gray-700 mb-2">Hai <span class="text-rose-500 font-semibold">Sayangku marwah</span>,</h1>
             <p class="text-lg text-gray-600 mb-10">Aku punya sesuatu yang spesial buat kamu...</p>
             
             <button onclick="openSurprise()" class="sparkle bg-rose-400 hover:bg-rose-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-rose-200 transition-all duration-300 transform hover:scale-105">
@@ -166,20 +164,18 @@
         </div>
     </div>
 
-    <!-- MAIN CONTENT (Akan muncul setelah tombol diklik) -->
+    <!-- MAIN CONTENT -->
     <div id="main-content" class="w-full">
         
         <!-- 2. HALAMAN UCAPAN (Typing Animation) -->
         <section class="min-h-screen flex items-center justify-center py-20 px-6 relative">
-            <!-- Hiasan background -->
             <div class="absolute top-20 left-10 text-rose-300 opacity-50 text-4xl floating">☁️</div>
             <div class="absolute bottom-20 right-10 text-rose-300 opacity-50 text-3xl floating-delayed">🎈</div>
 
-            <div class="max-w-2xl text-center bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-white/50 reveal">
+            <div class="max-w-3xl text-center bg-white/40 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-white/50 reveal">
                 <h2 class="font-cursive text-5xl md:text-6xl text-rose-500 mb-6 font-bold">Selamat Ulang Tahun</h2>
                 
-                <!-- Teks ini akan diketik secara otomatis oleh JavaScript -->
-                <div class="min-h-[150px]">
+                <div class="min-h-[300px]">
                     <p id="typed-message" class="text-lg md:text-xl leading-relaxed text-gray-700 typing-cursor"></p>
                 </div>
             </div>
@@ -193,9 +189,8 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
                     </svg>
                 </div>
-                <!-- EDIT DI SINI: Ganti umurnya -->
-                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Yey sekarang nambah jadi <span class="text-rose-500">15</span> Tahun! 🎉</h3>
-                <p class="text-gray-600">Semoga di umur yang baru ini, semua impian indah sayang jadi nyata.</p>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Yeyyy sekarang nambah jadi <span class="text-rose-500">15 tahun</span> 🎉</h3>
+                <p class="text-gray-600">Semoga di umur yang baru ini, semua impian indahmu jadi nyata.</p>
             </div>
         </section>
 
@@ -207,27 +202,18 @@
             </div>
 
             <div class="flex flex-wrap justify-center gap-8 md:gap-12 reveal">
-                <!-- Foto 1 -->
                 <div class="polaroid w-64 -rotate-3">
-                    <!-- EDIT DI SINI: Masukkan link foto 1 -->
                     <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Kenangan 1">
-                    <!-- EDIT DI SINI: Caption foto 1 -->
                     <p class="font-cursive text-2xl text-center mt-4 text-gray-700">Hari pertama kita...</p>
                 </div>
 
-                <!-- Foto 2 -->
                 <div class="polaroid w-64 rotate-2 translate-y-4">
-                    <!-- EDIT DI SINI: Masukkan link foto 2 -->
                     <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Kenangan 2">
-                    <!-- EDIT DI SINI: Caption foto 2 -->
                     <p class="font-cursive text-2xl text-center mt-4 text-gray-700">Senyum paling manis.</p>
                 </div>
 
-                <!-- Foto 3 -->
                 <div class="polaroid w-64 -rotate-2">
-                    <!-- EDIT DI SINI: Masukkan link foto 3 -->
                     <img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Kenangan 3">
-                    <!-- EDIT DI SINI: Caption foto 3 -->
                     <p class="font-cursive text-2xl text-center mt-4 text-gray-700">Cantik banget di sini!</p>
                 </div>
             </div>
@@ -246,7 +232,7 @@
             <!-- Pesan Tersembunyi -->
             <div id="hidden-message" class="hidden mt-10 p-6 bg-rose-500 text-white rounded-2xl shadow-xl max-w-md w-full transform transition-all">
                 <p class="text-xl font-medium mb-2">Yeyyy! Aku juga sayang banget sama kamu! 🥰</p>
-                <p class="text-sm opacity-90">Terima kasih udah selalu ada dan bikin hari-hariku jadi lebih berwarna.</p>
+                <p class="text-sm opacity-90">Terima kasih udah selalu sabar dan ada buat aku.</p>
             </div>
         </section>
 
@@ -255,7 +241,7 @@
             <div class="max-w-2xl">
                 <h2 class="font-cursive text-5xl text-rose-500 mb-6 font-bold">Sekali Lagi...</h2>
                 <p class="text-lg text-gray-700 mb-12">
-                    Semoga di tahun ini, senyum di wajahmu makin sering terlihat. Apapun mimpimu, aku akan selalu berusaha ada untuk dukung kamu. Bahagia selalu ya, cantikku.
+                    Semoga aku bisa nemenin sayang terus di the next birthday dan seterusnya. Bahagia selalu ya, cantikku!
                 </p>
                 
                 <div class="flex items-center justify-center gap-4 text-rose-400">
@@ -264,17 +250,15 @@
                     <span class="w-16 h-[1px] bg-rose-300"></span>
                 </div>
                 
-                <!-- EDIT DI SINI: Nama Panggilan Sayang -->
-                <p class="mt-8 font-cursive text-3xl text-gray-800">I Love You, <span class="text-rose-500">Sayanggg</span>.</p>
+                <p class="mt-8 font-cursive text-3xl text-gray-800">Love u more, <span class="text-rose-500">Princess Kecilku</span>.</p>
             </div>
         </section>
 
     </div>
 
     <script>
-        // EDIT DI SINI: Pesan utama yang akan diketik otomatis
-        // Gunakan <br> untuk garis baru (enter)
-        const pesanUcapan = "Di hari spesial ini, aku cuma mau bilang terima kasih. Terima kasih udah lahir ke dunia ini, dan terima kasih udah milih aku jadi bagian dari cerita kamu.<br><br>Kamu itu anugerah terindah buat aku. Semoga panjang umur, sehat selalu, dan semua yang kamu semogakan bisa segera terwujud. Amin.";
+        // PESAN SUDAH DIPERBARUI SESUAI REQUEST
+        const pesanUcapan = "haiii aloOooo selamat ulanggg tahunnn sayangggkuuuuu cintakuuuuu duniakuuuuuu lopyu lopyukuuuuuu princess kecilkuuuuu.<br><br>ciee udah nambah tua ajaaa nieee ?!?! mishhh u all the best yaaaaaa, semogaaaa cita citaaa yangg sayangggg inginnnkannn bisa terwujuudddd yaaaa, panjangggg umurrt sehatttt selaluuuu annndd berbaktiii kepadaaaa orangggg tuaa, aminnn.<br><br>semangattt terusss yaaa, jangannn pernahhh putusss asaa untukkk mengejarrr impian sayangggggg, akuuu selaluu dukunggg annndd supporttt sayanggg, semogaaa dii umurrt ini sayangg keberkahannn penuuu buat sayanggg, jangannn lupaaaa bersyukurrrr yaaa.<br><br>terimakasiii udaaaa mauuuu sabarrr samaaa akuuu, makasiii jugaaa udaaa sayang ke akuu hwhehee, semogaa tahunn ini akann lebiii baikkdariii sayanggg sebelumnya akuuu sayanggg lakukannnnnn, intinyaaa doaaa dariii akuuu bisaaa menjadiii oranggg yanggg sukses orang yanggg bisaaa membanggakannn oranggg tuaa...<br><br>pokoknya akuuuu selaluuu doa'innn yanggg terbaik buat sayangggg, sayanggggg happyyy birthdayyyyy yaaaa, im so proud of u.<br><br>hadiaaaaanyaaaa besoooo yaaa kalooo kitaaa ketemuuu, sekaliii lagiii happyy birthdayyyy, semangatttttt terusss buattt ngejalaninnnn hariii harinyaaaaa, i always support u, semogaaaa jugaaaa akuuu bisa nemeninnn sayanggg terusss d-iii theee nextt birthdayyyy, okeiiiiii cantikkkk?😘😘😘<br><br>love u more princessss kecillllkuuuuuu.";
         
         // Elemen-elemen DOM
         const openingScreen = document.getElementById('opening-screen');
@@ -284,36 +268,31 @@
         const hiddenMessage = document.getElementById('hidden-message');
         const loveBtn = document.getElementById('love-btn');
 
-        // Fungsi Buka Surprise (Dipanggil saat tombol pertama diklik)
+        // Fungsi Buka Surprise
         function openSurprise() {
-            // Efek transisi keluar
             openingScreen.classList.add('fade-out');
             
             setTimeout(() => {
-                openingScreen.style.display = 'none'; // Sembunyikan layar awal
-                mainContent.style.display = 'block';  // Tampilkan konten utama
+                openingScreen.style.display = 'none';
+                mainContent.style.display = 'block';
                 
-                // Trigger reflow agar transisi opacity bekerja
                 void mainContent.offsetWidth; 
                 mainContent.style.opacity = '1';
                 
-                // Mainkan musik background (Volume dikecilkan agar syahdu)
                 bgMusic.volume = 0.3; 
                 bgMusic.play().catch(e => console.log("Autoplay diblokir oleh browser."));
 
-                // Mulai efek ngetik
                 setTimeout(startTyping, 1000);
-            }, 1000); // Tunggu animasi fade-out selesai
+            }, 1000);
         }
 
-        // Fungsi Animasi Mengetik (Typing Effect)
+        // Fungsi Animasi Mengetik
         let i = 0;
         let isTag = false;
         let text = "";
 
         function startTyping() {
             if (i < pesanUcapan.length) {
-                // Handle HTML tags (seperti <br>) agar tidak diketik satu-satu hurufnya
                 if (pesanUcapan.charAt(i) === '<') {
                     isTag = true;
                 }
@@ -326,23 +305,20 @@
                 }
                 
                 i++;
-                // Kecepatan ngetik (ms)
-                let typingSpeed = isTag ? 0 : 50 + Math.random() * 30; 
+                // Dipercepat sedikit karena teksnya cukup panjang (20-40ms)
+                let typingSpeed = isTag ? 0 : 20 + Math.random() * 20; 
                 setTimeout(startTyping, typingSpeed);
             } else {
-                // Hapus efek cursor setelah selesai ngetik
                 typedTextElement.classList.remove('typing-cursor');
             }
         }
 
-        // Fungsi Kejutan Interaktif (Confetti & Teks Rahasia)
+        // Fungsi Kejutan Interaktif
         function triggerSurprise() {
-            // Sembunyikan tombol, tampilkan pesan
             loveBtn.style.display = 'none';
             hiddenMessage.classList.remove('hidden');
             hiddenMessage.classList.add('fade-in');
 
-            // Ledakan Confetti (Warna pastel / pink)
             const duration = 3000;
             const end = Date.now() + duration;
 
@@ -367,17 +343,15 @@
                 }
             }());
 
-            // Munculkan animasi hati jatuh di background
             createFallingHearts();
         }
 
-        // Efek Scroll Reveal (Memunculkan elemen dengan mulus saat discroll)
         function revealOnScroll() {
             const reveals = document.querySelectorAll('.reveal');
             for (let i = 0; i < reveals.length; i++) {
                 const windowHeight = window.innerHeight;
                 const elementTop = reveals[i].getBoundingClientRect().top;
-                const elementVisible = 100; // Jarak dari bawah layar sebelum elemen muncul
+                const elementVisible = 100;
 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add('active');
@@ -386,7 +360,6 @@
         }
         window.addEventListener('scroll', revealOnScroll);
 
-        // Efek Hati Jatuh (Dipanggil saat tombol kejutan diklik)
         function createFallingHearts() {
             const hearts = ['❤️', '💖', '💕', '🌸', '✨'];
             for(let i=0; i<15; i++) {
@@ -398,7 +371,6 @@
                     heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
                     document.body.appendChild(heart);
                     
-                    // Hapus elemen setelah selesai jatuh
                     setTimeout(() => {
                         heart.remove();
                     }, 5000);
@@ -407,4 +379,4 @@
         }
     </script>
 </body>
-  </html>
+                    </html>
